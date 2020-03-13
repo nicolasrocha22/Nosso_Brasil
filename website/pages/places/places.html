@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mateus Alberio, Nícolas Rocha, Paula Martins">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../assets/bootsrap/bootstrap.min.css">
+    <title>Nosso Brasil</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+            <span class="navbar-brand mb-0 h1">Nosso Brasil</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about/about.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./places.html">Locais</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Search">
+                    <button class="btn btn-warning my-2 my-sm-0" type="button">
+                        <img style="width: 20px;" src="../../assets/icons/search_icon.png">
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top: 50px;">
+        <br>
+        <section class="ads2">
+            <label style="float:right;">[Anúncio]</label>
+            <a href="#ads"><img style="width: 200px;" src="../../assets/ads/placeholder2.gif"></a>
+        </section><br>
+        <form class="form-inline" style="margin-left: 2%;" onclick="showRegion()">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
+            <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
+                <option></option>
+                <option value="Norte">Norte</option>
+                <option value="Nordeste">Nordeste</option>
+                <option value="Centro">Centro-Oeste</option>
+                <option value="Sudeste">Suldeste</option>
+                <option value="Sul">Sul</option>
+            </select>
+            <!--<button style="margin-left: 2%;" type="button" class="btn btn-outline-warning">
+                <img style="width: 24px;" src="../../assets/icons/filter_icon.png">
+            </button>-->
+        </form>
+        <br>
+        <div class="list-group" id="list">
+            <span id="list1">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Cristo Redentor</a>
+            </span>
+            <span id="list2">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Pão de Açúcar</a>
+            </span>
+            <span id="list3">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praia de Copacabana</a>
+            </span>
+            <span id="list4">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praça dos Três Poderes</a>
+            </span>
+            <span id="list5">
+                <a href="./norte/utinga.html" class="list-group-item list-group-item-action list-group-item-success">Parque do Utinga</a>
+            </span>
+            <span id="list6">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praia de Ipanema</a>
+            </span>
+            <span id="list7">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Estação das Docas</a>
+            </span>
+            <span id="list8">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praia de Iracema</a>
+            </span>
+            <span id="list9">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Rio da Prata</a>
+            </span>
+            <span id="list10">
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">Bairro da Liberdade</a>
+            </span>
+        </div>
+        <br><br>
+        <section class="ads">
+            <label style="float:right;">[Anúncio]</label>
+            <a href="#ads"><img style="width: 500px;" src="../../assets/ads/placeholder.gif"></a>
+        </section>
+        <br><br>
+    </main>
+    <footer>
+        <h5 style="margin-left: 1%">
+            <strong>Sobre esse site:</strong>
+        </h5>
+        <button type="button" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#exampleModalCenter">Feedback</button>
+        <div class="modal fade feedback" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered text-light" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-success">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Feedback</h5>
+                        <button type="submit" class="close" data-dismiss="modal" aria-label="Close" onclick="exitFeedback()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        <form id="feedback-box">
+                            <h5>Deixe seu feedback aqui:</h5>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Sugestão</label>
+                              </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Relatar um problema</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
+                            </div><br>
+                            <h6>Selecione qual navegador está sendo utilizado:</h6>
+                            <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
+                                <option>Selecione um navegador</option>
+                                <option value="Chromium">Google Chrome</option>
+                                <option value="Gecko">Mozilla Firefox</option>
+                                <option value="EdgeHTML/Chromium">Microsoft Edge</option>
+                                <option value="Webkit">Apple Safari</option>
+                            </select><br><br>
+                            <h6>Deixe seus comentários abaixo:</h6>
+                            <div class="form-group">
+                                <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer bg-success" id="feedback-send">
+                        <button type="button" class="btn btn-warning" onclick="sendFeedback()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label style="margin-left: 2%">Instituição: CESUPA Argo;</label><br>
+        <label style="margin-left: 2%">Orientador: Marcos Paulo;</label><br>
+        <label style="margin-left: 2%">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="../../assets/bootsrap/jquery-3.0.0.min.js"></script>
+    <script src="../../assets/bootsrap/bootstrap.min.js"></script>
+</body>
+</html>
