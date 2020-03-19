@@ -1,15 +1,13 @@
-function iframeHeight() {
-    var iframe = document.getElementById("map");
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-}
+var feedback = document.getElementById("feedback-box");
 
 function startClock(timezone) {
-    var clock = document.querySelector("span#clock");
-    var today = new Date();
-    var hour = today.getHours();
-    var minute = today.getMinutes();
-    var second = today.getSeconds();
-    var time = setTimeout(startClock, 500);
+    let clock = document.querySelector("span#clock");
+    let today = new Date();
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let second = today.getSeconds();
+
+    setTimeout(startClock, 500);
 
     minute = checkTime(minute);
     second = checkTime(second);
@@ -40,14 +38,21 @@ function checkTime(i) {
     return i;
 }
 
-function sendFeedback() {
-    var feedback = document.querySelector("form#feedback-box");
-    var send = document.querySelector("div#feedback-send");
+function iframeHeight() {
+    let iframe = document.getElementById("map");
 
-    feedback.innerHTML = "<br><br><br><br><br><br><br><h4 style='text-align: center;'>Agradecemos pelo seu feedback!</h4><br><br><br><br><br><br><br>";
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+}
+
+function sendFeedback() {
+    let send = document.querySelector("div#feedback-send");
+    let span = document.querySelector("span#feedback-msg");
+
+    feedback.style.display = "none";
+    span.innerHTML = "<br><br><br><br><br><br><br><h4 style='text-align: center;'>Agradecemos pelo seu feedback!</h4><br><br><br><br><br><br><br>";
     send.innerHTML = "<button type='button' class='btn btn-warning' data-dismiss='modal'>Fechar</button>"
 }
 
 function exitFeedback() {
-    document.querySelector("form#feedback-box").reset();
+    feedback.reset();
 }

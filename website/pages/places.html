@@ -5,11 +5,11 @@
     <meta name="author" content="Mateus Alberio, Nícolas Rocha, Paula Martins">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../../assets/bootsrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/places.css">
+    <link rel="stylesheet" href="../dependencies/bootstrap.min.css">
     <title>Nosso Brasil</title>
 </head>
-<body>
+<body onload="showList()">
     <header>
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
             <span class="navbar-brand mb-0 h1">Nosso Brasil</span>
@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">Início</a>
+                        <a class="nav-link" href="../index.html">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../about/about.html">Sobre</a>
+                        <a class="nav-link" href="./about.html">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="./places.html">Locais</a>
@@ -31,7 +31,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Search">
                     <button class="btn btn-warning my-2 my-sm-0" type="button">
-                        <img style="width: 20px;" src="../../assets/icons/search_icon.png">
+                        <img style="width: 20px;" src="../img/icons/search_icon.png">
                     </button>
                 </form>
             </div>
@@ -41,23 +41,41 @@
         <br>
         <section class="ads2">
             <label style="float:right;">[Anúncio]</label>
-            <a href="#ads"><img style="width: 200px;" src="../../assets/ads/placeholder2.gif"></a>
+            <a href="#ads"><img style="width: 200px;" src="../img/ads/placeholder2.gif"></a>
         </section><br>
-        <form class="form-inline" style="margin-left: 2%;" onclick="showRegion()">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
-            <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
-                <option></option>
-                <option value="Norte">Norte</option>
-                <option value="Nordeste">Nordeste</option>
-                <option value="Centro">Centro-Oeste</option>
-                <option value="Sudeste">Suldeste</option>
-                <option value="Sul">Sul</option>
-            </select>
-            <!--<button style="margin-left: 2%;" type="button" class="btn btn-outline-warning">
-                <img style="width: 24px;" src="../../assets/icons/filter_icon.png">
-            </button>-->
-        </form>
-        <br>
+        <div style="margin-left: 2%;" class="filter">
+            <p>
+                <div style="margin-left: 2%;" class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" id="btn_region" class="btn btn-outline-warning">Turismo</button>
+                    <button type="button" id="btn_local" class="btn btn-outline-warning">Estabelecimentos</button>
+                </div>
+                <button style="margin-left: 2%;" type="button" class="btn btn-outline-warning" data-toggle="collapse" data-target="#collapseExample">
+                    <img style="width: 24px;" src="../img/icons/filter_icon.png">
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body border-warning" id="filter">
+                    <form style="margin-left: 1%;" class="form-inline" id="filter_form">
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
+                        <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" onload="showList()">
+                            <option></option>
+                            <option value="Norte">Norte</option>
+                            <option value="Nordeste">Nordeste</option>
+                            <option value="Centro">Centro-Oeste</option>
+                            <option value="Sudeste">Suldeste</option>
+                            <option value="Sul">Sul</option>
+                        </select>
+                        <label style="margin-left: 2%;" class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione um filtro:</label>
+                        <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
+                            <option></option>
+                            <option>Bem avaliados</option>
+                            <option>Mais visitados</option>
+                            <option>Adicionados recentimente</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="list-group" id="list">
             <span id="list1">
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">Cristo Redentor</a>
@@ -93,7 +111,7 @@
         <br><br>
         <section class="ads">
             <label style="float:right;">[Anúncio]</label>
-            <a href="#ads"><img style="width: 500px;" src="../../assets/ads/placeholder.gif"></a>
+            <a href="#ads"><img style="width: 500px;" src="../img/ads/placeholder.gif"></a>
         </section>
         <br><br>
     </main>
@@ -112,36 +130,36 @@
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form id="feedback-box">
+                        <form action="../data/feedback.php" id="feedback-box" method="get" target="iframe" onsubmit="sendFeedback()">
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
                                 <label class="custom-control-label" for="customRadio1">Sugestão</label>
-                              </div>
+                            </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="problem">
                                 <label class="custom-control-label" for="customRadio2">Relatar um problema</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="info">
                                 <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
                             </div><br>
                             <h6>Selecione qual navegador está sendo utilizado:</h6>
-                            <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
-                                <option>Selecione um navegador</option>
+                            <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
+                                <option value="">Selecione um navegador</option>
                                 <option value="Chromium">Google Chrome</option>
                                 <option value="Gecko">Mozilla Firefox</option>
-                                <option value="EdgeHTML/Chromium">Microsoft Edge</option>
+                                <option value="EdgeHTML">Microsoft Edge</option>
                                 <option value="Webkit">Apple Safari</option>
                             </select><br><br>
                             <h6>Deixe seus comentários abaixo:</h6>
                             <div class="form-group">
-                                <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui"></textarea>
+                                <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui" name="comentary"></textarea>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer bg-success" id="feedback-send">
-                        <button type="button" class="btn btn-warning" onclick="sendFeedback()">Enviar</button>
+                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback-box">
                     </div>
                 </div>
             </div>
@@ -149,9 +167,11 @@
         <label style="margin-left: 2%">Instituição: CESUPA Argo;</label><br>
         <label style="margin-left: 2%">Orientador: Marcos Paulo;</label><br>
         <label style="margin-left: 2%">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+        <iframe style="display: none;" name="iframe"></iframe>
     </footer>
-    <script src="./script.js"></script>
-    <script src="../../assets/bootsrap/jquery-3.0.0.min.js"></script>
-    <script src="../../assets/bootsrap/bootstrap.min.js"></script>
+    <script src="../dependencies/jquery-3.0.0.min.js"></script>
+    <script src="../dependencies/bootstrap.min.js"></script>
+    <script src="../scripts/places.js"></script>
+    
 </body>
 </html>

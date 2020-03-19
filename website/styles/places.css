@@ -2,21 +2,16 @@
     font-family: Candara;
 }
 
-h1 { 
-    font-size: 49px; 
-    font-weight: 700; 
-    line-height: 49.5px; 
+#filter {
+    margin-left: 2%;
+    margin-right: 30%;
+    margin-bottom: 1%;
 }
 
-p { 
-    font-size: 17px;
-    font-weight: 400; 
-    line-height: 20px;
-}
-
-.about_text {
-    margin-left: 3%;
-    margin-right: 20%;
+#list {
+    display: block;
+    margin-left: 2%;
+    margin-right: 17%;
 }
 
 .ads {
@@ -25,6 +20,15 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.ads2 {
+    width: 10%;
+    float: right;
+    position: relative;
+    display: block;
+    top: 150px;
+    margin-right: 6%;
 }
 
 footer {
