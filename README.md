@@ -12,3 +12,9 @@ local como restaurantes, pubs e casas de festas para as pessoas poderem ser info
 <br>
 Estamos desenvolvendo uma plataforma que fará uma transmissão ao vivo de um local ou estabelecimento e será
 mostrado algumas informações como localização, clima, horário local, etc.
+
+<h2>Descrição do projeto</h2>
+
+Na plataforma mostrará uma transmissão ao vivo de um local ou estabelecimento, o usuário pode consultar para ver
+como está o local naquele momento para decidir se irá ou não. Está plataforma estará disponível tanto para o
+usuário comum tanto para donos de estabelecimentos para divugarem os seus lugares para na plataforma.
