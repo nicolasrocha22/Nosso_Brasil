@@ -29,10 +29,18 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Search">
-                    <button class="btn btn-warning my-2 my-sm-0" type="button">
-                        <img style="width: 20px;" src="../img/icons/search_icon.png">
+                    <button class="btn btn-success nav-link" id="account_btn">
+                        Fazer Login
                     </button>
+                    <span style="visibility: hidden;">...</span>
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-warning">
+                                <img style="width: 20px;" src="../img/icons/search_icon.png">
+                            </button>
+                        </div>
+                    </div>                      
                 </form>
             </div>
         </nav>
@@ -87,7 +95,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form action="../data/feedback.php" id="feedback-box" method="get" target="iframe" onsubmit="sendFeedback()">
+                        <form action="../data/feedback.php" id="feedback_box" method="get" target="iframe" onsubmit="sendFeedback()">
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
@@ -115,7 +123,8 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer bg-success" id="feedback-send">
+                    <span id="feedback_msg"></span>
+                    <div class="modal-footer bg-success" id="feedback_send">
                         <input type="submit" class="btn btn-warning" value="Enviar" form="feedback-box">
                     </div>
                 </div>

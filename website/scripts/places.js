@@ -1,26 +1,30 @@
-var feedback = document.getElementById("feedback-box");
+var feedback = document.getElementById("feedback_box");
 
 function showList() {
-    let turismo = document.querySelector("button#btn_region");
-    let local = document.querySelector("button#btn_local");
+    let tourism = document.querySelector("button#tourism_btn");
+    let local = document.querySelector("button#local_btn");
+    let filter = document.getElementById("filter_btn");
+    let filter_span = document.querySelector("span#filter_span");
 
-    document.querySelector("span#list1").innerHTML = '<a href="./norte/estacao.html" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list4").innerHTML = '<a href="./norte/utinga.html" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
-    document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>';
+    let tourism_filter = document.getElementById("tourism_filter");
+    let local_filter = document.getElementById("local_filter");
 
-    turismo.onclick = function() {
-        document.querySelector("form#filter_form").reset();
-        turismo.classList.add("active");
+    tourism_filter.style.display = "none";
+    local_filter.style.display = "none";
+
+    tourism.onclick = function() {
+        document.querySelector("form#tourism_filter").reset();
+        document.querySelector("form#local_filter").reset();
+
+        tourism.classList.add("active");
         local.classList.remove("active");
+        filter_span.innerHTML = [
+            "<button style='margin-left: 2%;' type='button' class='btn btn-outline-warning' id='filter_btn' data-toggle='collapse' data-target='#collapseExample'><img style='width: 24px;' src='../img/icons/filter_icon.png'></button>"
+        ];
+        tourism_filter.style.display = null;
+        local_filter.style.display = "none";
 
-        let region = document.querySelector("select#inlineFormCustomSelectPref");
+        let region = document.querySelector("select#region");
 
         document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">Cristo Redentor</a>'
         document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">Pão de Açúcar</a>'
@@ -94,9 +98,16 @@ function showList() {
     }
     
     local.onclick = function() {
-        document.querySelector("form#filter_form").reset();
+        document.querySelector("form#tourism_filter").reset();
+        document.querySelector("form#local_filter").reset();
+
         local.classList.add("active");
-        turismo.classList.remove("active");
+        tourism.classList.remove("active");
+        filter_span.innerHTML = [
+            "<button style='margin-left: 2%;' type='button' class='btn btn-outline-warning' id='filter_btn' data-toggle='collapse' data-target='#collapseExample'><img style='width: 24px;' src='../img/icons/filter_icon.png'></button>"
+        ];
+        tourism_filter.style.display = "none";
+        local_filter.style.display = null;
 
         document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">Local 1</a>';
         document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">Local 2</a>';
@@ -112,8 +123,8 @@ function showList() {
 }
 
 function sendFeedback() {
-    let send = document.querySelector("div#feedback-send");
-    let span = document.querySelector("span#feedback-msg");
+    let send = document.querySelector("div#feedback_send");
+    let span = document.querySelector("span#feedback_msg");
 
     feedback.style.display = "none";
     span.innerHTML = "<br><br><br><br><br><br><br><h4 style='text-align: center;'>Agradecemos pelo seu feedback!</h4><br><br><br><br><br><br><br>";

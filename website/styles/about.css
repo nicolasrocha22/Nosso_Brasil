@@ -2,6 +2,11 @@
     font-family: Candara;
 }
 
+#account_btn img {
+    width: 25px;
+    border-radius: 100%;
+}
+
 h1 { 
     font-size: 49px; 
     font-weight: 700; 

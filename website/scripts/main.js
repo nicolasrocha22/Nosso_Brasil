@@ -1,8 +1,8 @@
-var feedback = document.getElementById("feedback-box");
+var feedback = document.getElementById("feedback_box");
 
 function sendFeedback() {
-    let send = document.querySelector("div#feedback-send");
-    let span = document.querySelector("span#feedback-msg");
+    let send = document.querySelector("div#feedback_send");
+    let span = document.querySelector("span#feedback_msg");
 
     feedback.style.display = "none";
     span.innerHTML = "<br><br><br><br><br><br><br><h4 style='text-align: center;'>Agradecemos pelo seu feedback!</h4><br><br><br><br><br><br><br>";

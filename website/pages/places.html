@@ -29,35 +29,57 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Search">
-                    <button class="btn btn-warning my-2 my-sm-0" type="button">
-                        <img style="width: 20px;" src="../img/icons/search_icon.png">
+                    <button class="btn btn-success nav-link" id="account_btn">
+                        Fazer Login
                     </button>
+                    <span style="visibility: hidden;">...</span>
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-warning">
+                                <img style="width: 20px;" src="../img/icons/search_icon.png">
+                            </button>
+                        </div>
+                    </div>                      
                 </form>
             </div>
         </nav>
     </header>
     <main style="margin-top: 50px;">
         <br>
-        <section class="ads2">
-            <label style="float:right;">[Anúncio]</label>
-            <a href="#ads"><img style="width: 200px;" src="../img/ads/placeholder2.gif"></a>
-        </section><br>
+        <h1 style="margin-left: 1%;" class="text-success">Locais</h1>
+        <p class="places_text">Selecione abaixo se deseja ver um ponto turístico ou um estabelecimento</p>
         <div style="margin-left: 2%;" class="filter">
             <p>
                 <div style="margin-left: 2%;" class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id="btn_region" class="btn btn-outline-warning">Turismo</button>
-                    <button type="button" id="btn_local" class="btn btn-outline-warning">Estabelecimentos</button>
+                    <button type="button" id="tourism_btn" class="btn btn-outline-warning">Pontos Turísticos</button>
+                    <button type="button" id="local_btn" class="btn btn-outline-warning">Estabelecimentos</button>
                 </div>
-                <button style="margin-left: 2%;" type="button" class="btn btn-outline-warning" data-toggle="collapse" data-target="#collapseExample">
-                    <img style="width: 24px;" src="../img/icons/filter_icon.png">
-                </button>
+                <span id="filter_span"></span>
             </p>
             <div class="collapse" id="collapseExample">
                 <div class="card card-body border-warning" id="filter">
-                    <form style="margin-left: 1%;" class="form-inline" id="filter_form">
+                    <form style="margin-left: 1%;" class="form-inline" id="tourism_filter">
                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
-                        <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" onload="showList()">
+                        <select class="custom-select my-1 mr-sm-2 border-primary" id="region" onload="showList()">
+                            <option></option>
+                            <option value="Norte">Norte</option>
+                            <option value="Nordeste">Nordeste</option>
+                            <option value="Centro">Centro-Oeste</option>
+                            <option value="Sudeste">Suldeste</option>
+                            <option value="Sul">Sul</option>
+                        </select>
+                        <label style="margin-left: 2%;" class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione um filtro:</label>
+                        <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
+                            <option></option>
+                            <option>Bem avaliados</option>
+                            <option>Mais visitados</option>
+                            <option>Adicionados recentimente</option>
+                        </select>
+                    </form>
+                    <form style="margin-left: 1%;" class="form-inline" id="local_filter">
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
+                        <select class="custom-select my-1 mr-sm-2 border-primary" id="region">
                             <option></option>
                             <option value="Norte">Norte</option>
                             <option value="Nordeste">Nordeste</option>
@@ -76,36 +98,40 @@
                 </div>
             </div>
         </div>
+        <section class="ads2">
+            <label style="float:right;">[Anúncio]</label>
+            <a href="#ads"><img style="width: 200px;" src="../img/ads/placeholder2.gif"></a>
+        </section>
         <div class="list-group" id="list">
             <span id="list1">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Cristo Redentor</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list2">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Pão de Açúcar</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list3">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praia de Copacabana</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list4">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praça dos Três Poderes</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list5">
-                <a href="./norte/utinga.html" class="list-group-item list-group-item-action list-group-item-success">Parque do Utinga</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list6">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praia de Ipanema</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list7">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Estação das Docas</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list8">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Praia de Iracema</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list9">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Rio da Prata</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
             <span id="list10">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">Bairro da Liberdade</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
             </span>
         </div>
         <br><br>
@@ -130,7 +156,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form action="../data/feedback.php" id="feedback-box" method="get" target="iframe" onsubmit="sendFeedback()">
+                        <form action="../data/feedback.php" id="feedback_box" method="get" target="iframe" onsubmit="sendFeedback()">
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
@@ -157,9 +183,10 @@
                                 <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui" name="comentary"></textarea>
                             </div>
                         </form>
+                        <span id="feedback_msg"></span>
                     </div>
-                    <div class="modal-footer bg-success" id="feedback-send">
-                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback-box">
+                    <div class="modal-footer bg-success" id="feedback_send">
+                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
                     </div>
                 </div>
             </div>

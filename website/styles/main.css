@@ -2,6 +2,11 @@
     font-family: Candara;
 }
 
+#account_btn img {
+    width: 25px;
+    border-radius: 100%;
+}
+
 .welcome {
     position: relative;
 }
