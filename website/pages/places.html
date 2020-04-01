@@ -29,7 +29,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success nav-link" id="account_btn">
+                    <button class="btn btn-success btn-sm nav-link" id="account_btn">
                         Fazer Login
                     </button>
                     <span style="visibility: hidden;">...</span>
@@ -151,12 +151,12 @@
                 <div class="modal-content">
                     <div class="modal-header bg-success">
                         <h5 class="modal-title" id="exampleModalLongTitle">Feedback</h5>
-                        <button type="submit" class="close" data-dismiss="modal" aria-label="Close" onclick="exitFeedback()">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitFeedback()">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form action="../data/feedback.php" id="feedback_box" method="get" target="iframe" onsubmit="sendFeedback()">
+                        <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
@@ -171,6 +171,7 @@
                                 <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
                             </div><br>
                             <h6>Selecione qual navegador está sendo utilizado:</h6>
+                            <div id="optionError"></div>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
                                 <option value="">Selecione um navegador</option>
                                 <option value="Chromium">Google Chrome</option>
@@ -198,7 +199,7 @@
     </footer>
     <script src="../dependencies/jquery-3.0.0.min.js"></script>
     <script src="../dependencies/bootstrap.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/places.js"></script>
-    
 </body>
 </html>

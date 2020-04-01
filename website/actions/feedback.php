@@ -31,4 +31,5 @@ $feedback = json_encode($feedback);
 file_put_contents($feedback_file, $feedback);
 
 chdir("..");
+
 ?>

@@ -29,7 +29,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success nav-link" id="account_btn">
+                    <button class="btn btn-success btn-sm nav-link" id="account_btn">
                         Fazer Login
                     </button>
                     <span style="visibility: hidden;">...</span>
@@ -56,22 +56,16 @@
             Estamos desenvolvendo uma plataforma que fará uma transmissão ao vivo de um local ou estabelecimento e será
             mostrado algumas informações como: localização, clima, horário local, etc.
         </p><br><br>
-        <p>
-            <button style="margin-left: 4%;" class="btn btn-outline-warning" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Contato
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body border-success" id="contact">
-                <p>
-                    <strong>Telefone: </strong>(91) 91234-5678;
-                </p>
-                <p>
-                    <strong>Email: </strong>nosso_brasil@email.com;<br>
-                </p>
-                <p><strong>Localização:</strong></p>
-                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.540329664714!2d-48.47962718572445!3d-1.450228736234833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48c26da0bbc99%3A0x3e7fb16332282dbd!2sCesupa%20-%20Unidade%20Alcindo%20Cacela%20I%20(Argo)!5e0!3m2!1spt-BR!2sbr!4v1584369058745!5m2!1spt-BR!2sbr" height="400" frameborder="0" allowfullscreen="" onload="iframeHeight()"></iframe>
-            </div>
+        <div class="card card-body border-success shadow" id="contact">
+            <h3 class="card-title text-success">Contato</h3>
+            <p>
+                <strong>Telefone: </strong>(91) 91234-5678;
+            </p>
+            <p>
+                <strong>Email: </strong>nosso_brasil@email.com;<br>
+            </p>
+            <p><strong>Localização:</strong></p>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.540329664714!2d-48.47962718572445!3d-1.450228736234833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48c26da0bbc99%3A0x3e7fb16332282dbd!2sCesupa%20-%20Unidade%20Alcindo%20Cacela%20I%20(Argo)!5e0!3m2!1spt-BR!2sbr!4v1584369058745!5m2!1spt-BR!2sbr" height="400" frameborder="0" allowfullscreen="" onload="iframeHeight()"></iframe>
         </div>
         <br><br><br><br>
         <section class="ads">
@@ -95,7 +89,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form action="../data/feedback.php" id="feedback_box" method="get" target="iframe" onsubmit="sendFeedback()">
+                        <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
@@ -110,6 +104,7 @@
                                 <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
                             </div><br>
                             <h6>Selecione qual navegador está sendo utilizado:</h6>
+                            <div id="optionError"></div>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
                                 <option value="">Selecione um navegador</option>
                                 <option value="Chromium">Google Chrome</option>
@@ -122,10 +117,10 @@
                                 <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui" name="comentary"></textarea>
                             </div>
                         </form>
+                        <span id="feedback_msg"></span>
                     </div>
-                    <span id="feedback_msg"></span>
                     <div class="modal-footer bg-success" id="feedback_send">
-                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback-box">
+                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
                     </div>
                 </div>
             </div>
@@ -136,6 +131,7 @@
     </footer>
     <script src="../dependencies/jquery-3.0.0.min.js"></script>
     <script src="../dependencies/bootstrap.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/about.js"></script>
     <iframe style="display: none;" name="iframe"></iframe>
 </body>

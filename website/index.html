@@ -29,7 +29,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success nav-link" id="account_btn">
+                    <button class="btn btn-success btn-sm nav-link" id="account_btn">
                         Fazer Login
                     </button>
                     <span style="visibility: hidden;">...</span>
@@ -58,13 +58,13 @@
             <div class="card-deck">
                 <div style="width: 18rem;" class="card border-success">
                     <img src="./img/liberdade.jpg" class="card-img-top" alt="liberdade_img">
-                    <div class="card-body text-dark">
+                    <div class="card-body text-dark shadow">
                       <h5 class="card-title text-success">Bairro da Liberdade</h5>
                       <p class="card-text">Localizado na capital do estado de São Paulo. O bairro é famoso pela rica cultura oriental e abriga a maior comunidade asiática do país.</p>
                       <a href="#" class="btn btn-outline-warning">Ir à página</a>
                     </div>
                 </div>
-                <div style="width: 18rem;" class="card border-success">
+                <div style="width: 18rem;" class="card border-success shadow">
                     <img src="./img/utinga.jpg" class="card-img-top" alt="docas_img">
                     <div class="card-body text-dark">
                       <h5 class="card-title text-success">Parque do Utinga</h5>
@@ -72,7 +72,7 @@
                       <a href="./pages/places/utinga.html" class="btn btn-outline-warning">Ir à página</a>
                     </div>
                 </div>
-                <div style="width: 18rem;" class="card border-success">
+                <div style="width: 18rem;" class="card border-success shadow">
                     <img src="./img/iracema.jpg" class="card-img-top" alt="iracema_img">
                     <div class="card-body text-dark">
                       <h5 class="card-title text-success">Praia de Iracema</h5>
@@ -104,7 +104,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form action="./actions/feedback.php" id="feedback_box" method="get" target="iframe" onsubmit="sendFeedback()">
+                        <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
@@ -119,6 +119,7 @@
                                 <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
                             </div><br>
                             <h6>Selecione qual navegador está sendo utilizado:</h6>
+                            <div id="optionError"></div>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
                                 <option value="">Selecione um navegador</option>
                                 <option value="Chromium">Google Chrome</option>

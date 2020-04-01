@@ -30,7 +30,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success nav-link" id="account_btn">
+                    <button class="btn btn-success btn-sm nav-link" id="account_btn">
                         Fazer Login
                     </button>
                     <span style="visibility: hidden;">...</span>
@@ -62,7 +62,7 @@
         <br><br>
         <div class="card border-success" id="camera_view">
             <img src="../../img/utinga.jpg" class="card-img-top" alt="utinga_img">
-            <div class="card-body">
+            <div class="card-body shadow">
                 <h5 style="font-weight: 600;" class="card-title text-success">Informações</h5>
                 <p style="display: inline;" class="card-text">
                     Horário Local: <span id="clock"></span>
@@ -80,14 +80,14 @@
         <br><br><br><br>
         <div class="card-deck" id="info">
             <div class="card border-success">
-                <div class="card-body">
+                <div class="card-body shadow">
                     <h3 class="card-title text-success">Endereço</h3>
                     <p class="card-text">Av. João Paulo II, S/N - Curió Utinga, Belém - PA</p>
                     <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5829756878943!2d-48.446392786003415!3d-1.4258253989601262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48b14df0b4c1d%3A0x19808db05d7d17b0!2sParque%20Estadual%20do%20Utinga!5e0!3m2!1spt-BR!2sbr!4v1583043794797!5m2!1spt-BR!2sbr" height="400" frameborder="0" allowfullscreen="" onload="iframeHeight()"></iframe>
                 </div>
             </div>
             <div class="card border-success">
-                <div class="card-body">
+                <div class="card-body shadow">
                     <h3 class="card-title text-success">Clima</h3>
                     <p class="card-text">[Placeholder]</p>
                     <a class="weatherwidget-io" id="weather" href="https://forecast7.com/pt/n1d46n48d49/belem/" data-label_1="BELÉM" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="5" data-theme="retro-sky" >BELÉM WEATHER</a>
@@ -116,7 +116,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-dark">
-                        <form action="../../data/feedback.php" id="feedback_box" method="get" target="iframe" onsubmit="sendFeedback()">
+                        <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
                             <h5>Deixe seu feedback aqui:</h5>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
@@ -131,6 +131,7 @@
                                 <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
                             </div><br>
                             <h6>Selecione qual navegador está sendo utilizado:</h6>
+                            <div id="optionError"></div>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
                                 <option value="">Selecione um navegador</option>
                                 <option value="Chromium">Google Chrome</option>
@@ -145,8 +146,8 @@
                         </form>
                         <span id="feedback_msg"></span>
                     </div>
-                    <div class="modal-footer bg-success" id="feedback-send">
-                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback-box">
+                    <div class="modal-footer bg-success" id="feedback_send">
+                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
                     </div>
                 </div>
             </div>
@@ -158,6 +159,7 @@
     </footer>
     <script src="../../dependencies/jquery-3.0.0.min.js"></script>
     <script src="../../dependencies/bootstrap.min.js"></script>
+    <script src="../../scripts/main.js"></script>
     <script src="../../scripts/utinga.js"></script>
     <script>
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');

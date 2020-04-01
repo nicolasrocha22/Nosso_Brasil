@@ -1,5 +1,3 @@
-var feedback = document.getElementById("feedback_box");
-
 function showList() {
     let tourism = document.querySelector("button#tourism_btn");
     let local = document.querySelector("button#local_btn");
@@ -120,17 +118,4 @@ function showList() {
         document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">Local 9</a>';
         document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-success">Local 10</a>';
     }
-}
-
-function sendFeedback() {
-    let send = document.querySelector("div#feedback_send");
-    let span = document.querySelector("span#feedback_msg");
-
-    feedback.style.display = "none";
-    span.innerHTML = "<br><br><br><br><br><br><br><h4 style='text-align: center;'>Agradecemos pelo seu feedback!</h4><br><br><br><br><br><br><br>";
-    send.innerHTML = "<button type='button' class='btn btn-warning' data-dismiss='modal'>Fechar</button>"
-}
-
-function exitFeedback() {
-    feedback.reset();
 }
