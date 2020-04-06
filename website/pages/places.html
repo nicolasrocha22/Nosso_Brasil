@@ -29,9 +29,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success btn-sm nav-link" id="account_btn">
-                        Fazer Login
-                    </button>
+                    <button class="btn btn-success btn-sm nav-link" id="account_btn">Fazer Login</button>
                     <span style="visibility: hidden;">...</span>
                     <div class="input-group">
                         <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -141,16 +139,16 @@
         </section>
         <br><br>
     </main>
-    <footer>
+    <footer class="bg-success text-light">
         <h5 style="margin-left: 1%">
             <strong>Sobre esse site:</strong>
         </h5>
-        <button type="button" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#exampleModalCenter">Feedback</button>
-        <div class="modal fade feedback" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#Feedback_Modal">Feedback</button>
+        <div class="modal fade feedback" id="Feedback_Modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered text-light" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-success">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Feedback</h5>
+                        <h5 class="modal-title">Feedback</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitFeedback()">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -192,9 +190,9 @@
                 </div>
             </div>
         </div>
-        <label style="margin-left: 2%">Instituição: CESUPA Argo;</label><br>
-        <label style="margin-left: 2%">Orientador: Marcos Paulo;</label><br>
-        <label style="margin-left: 2%">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+        <label style="margin-left: 2%;">Instituição: CESUPA Argo;</label><br>
+        <label style="margin-left: 2%;">Orientador: Marcos Paulo;</label><br>
+        <label style="margin-left: 2%;">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
         <iframe style="display: none;" name="iframe"></iframe>
     </footer>
     <script src="../dependencies/jquery-3.0.0.min.js"></script>

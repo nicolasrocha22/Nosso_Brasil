@@ -30,9 +30,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success btn-sm nav-link" id="account_btn">
-                        Fazer Login
-                    </button>
+                    <button class="btn btn-success btn-sm nav-link" id="account_btn">Fazer Login</button>
                     <span style="visibility: hidden;">...</span>
                     <div class="input-group">
                         <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -51,7 +49,7 @@
         <section class="ads2">
             <label style="float:right;">[Anúncio]</label>
             <a href="#ads"><img style="width: 200px;" src="../../img/ads/placeholder2.gif"></a>
-        </section><br>
+        </section>
         <h1 style="margin-left: 1%;" class="text-success">Parque do Utinga</h1><br>
         <p class="about_text">
             Localizado no coração da Região Metropolitana de Belém, Estado do Pará, Brasil, o Parque Estadual do Utinga é a unidade-símbolo
@@ -89,7 +87,7 @@
             <div class="card border-success">
                 <div class="card-body shadow">
                     <h3 class="card-title text-success">Clima</h3>
-                    <p class="card-text">[Placeholder]</p>
+                    <p style="visibility: hidden;" class="card-text">[Placeholder]</p>
                     <a class="weatherwidget-io" id="weather" href="https://forecast7.com/pt/n1d46n48d49/belem/" data-label_1="BELÉM" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="5" data-theme="retro-sky" >BELÉM WEATHER</a>
                 </div>
             </div>
@@ -101,16 +99,16 @@
         </section>
         <br><br>
     </main>
-    <footer>
+    <footer class="bg-success text-light">
         <h5 style="margin-left: 1%">
             <strong>Sobre esse site:</strong>
         </h5>
-        <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#exampleModalCenter">Feedback</button>
-        <div class="modal fade feedback" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#Feedback_Modal">Feedback</button>
+        <div class="modal fade feedback" id="Feedback_Modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered text-light" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-success">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Feedback</h5>
+                        <h5 class="modal-title">Feedback</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitFeedback()">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -152,17 +150,15 @@
                 </div>
             </div>
         </div>
-        <label style="margin-left: 2%">Instituição: CESUPA Argo;</label><br>
-        <label style="margin-left: 2%">Orientador: Marcos Paulo;</label><br>
-        <label style="margin-left: 2%">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+        <label style="margin-left: 2%;">Instituição: CESUPA Argo;</label><br>
+        <label style="margin-left: 2%;">Orientador: Marcos Paulo;</label><br>
+        <label style="margin-left: 2%;">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
         <iframe style="display: none;" name="iframe"></iframe>
     </footer>
     <script src="../../dependencies/jquery-3.0.0.min.js"></script>
     <script src="../../dependencies/bootstrap.min.js"></script>
+    <script src="../../dependencies/weather.js"></script>
     <script src="../../scripts/main.js"></script>
     <script src="../../scripts/utinga.js"></script>
-    <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
 </body>
 </html>
