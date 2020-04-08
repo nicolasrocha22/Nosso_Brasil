@@ -22,6 +22,6 @@ function sendFeedback() {
     send.innerHTML = "<button type='button' class='btn btn-warning' data-dismiss='modal'>Fechar</button>"
 }
 
-function exitFeedback() {
+function exitModal() {
     feedback.reset();
 }
