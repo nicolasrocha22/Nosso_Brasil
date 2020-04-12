@@ -1,173 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Mateus Alberio, Nícolas Rocha, Paula Martins">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./dependencies/bootstrap.min.css">
-    <title>Nosso Brasil</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
-            <span class="navbar-brand mb-0 h1">Nosso Brasil</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="./index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/about.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/places.html">Locais</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <button type="button" class="btn btn-success btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">Fazer Login</button>
-                    <span style="visibility: hidden;">...</span>
-                    <div class="input-group">
-                        <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button type="button" class="btn btn-warning">
-                                <img style="width: 20px;" src="./img/icons/search_icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Mateus Alberio, Nícolas Rocha, Paula Martins">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./dependencies/bootstrap.min.css">
+        <title>Nosso Brasil</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+                <span class="navbar-brand mb-0 h1">Nosso Brasil</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="./index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/about.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/places.html">Locais</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button type="button" class="btn btn-success btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">Fazer Login</button>
+                        <span style="visibility: hidden;">...</span>
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-warning">
+                                    <img style="width: 20px;" src="./img/icons/search_icon.png">
+                                </button>
+                            </div>
+                        </div>                 
+                    </form>
+                </div>
+            </nav>
+            <div class="modal fade" id="account_modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-light">
+                            <h5 class="modal-title">Conta</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    </div>                 
-                </form>
-            </div>
-        </nav>
-        <div class="modal fade" id="account_modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header bg-success text-light">
-                        <h5 class="modal-title">Conta</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <br><br><br><br><br>
-                        <p style="text-align: center;">[Account_Placeholder]</p>
-                        <br><br><br><br><br>
-                    </div>
-                    <div class="modal-footer bg-success text-light">
-                        <button type="button" class="btn btn-warning">Login</button>
+                        <div class="modal-body">
+                            <br><br><br><br><br>
+                            <p style="text-align: center;">[Account_Placeholder]</p>
+                            <br><br><br><br><br>
+                        </div>
+                        <div class="modal-footer bg-success text-light">
+                            <button type="button" class="btn btn-warning">Login</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main style="margin-top: 50px;">
-        <div class="welcome">
-            <img id="welcome_img" src="./img/welcome.jpg" alt="welcome_img">
-            <div id="welcome_text">
-                <h4>Bem-vindo ao nosso projeto!</h4>
-                <p>Veja várias maravilhas do Brasil ao vivo pelo nosso site.</p>
-            </div>
-        </div><br>
-        <div class="popular">
-            <p><h4 style="text-align:center;">Locais Populares</h4></p>
-            <div class="card-deck">
-                <div style="width: 18rem;" class="card border-success">
-                    <img src="./img/liberdade.jpg" class="card-img-top" alt="liberdade_img">
-                    <div class="card-body text-dark shadow">
-                        <h5 class="card-title text-success">Bairro da Liberdade</h5>
-                        <p class="card-text">Localizado na capital do estado de São Paulo. O bairro é famoso pela rica cultura oriental e abriga a maior comunidade asiática do país.</p>
-                        <a href="#" class="btn btn-outline-warning">Ir à página</a>
-                    </div>
+        </header>
+        <main style="margin-top: 50px;">
+            <div class="welcome">
+                <img id="welcome_img" src="./img/welcome.jpg" alt="welcome_img">
+                <div id="welcome_text">
+                    <h4>Bem-vindo ao nosso projeto!</h4>
+                    <p>Veja várias maravilhas do Brasil ao vivo pelo nosso site.</p>
                 </div>
-                <div style="width: 18rem;" class="card border-success shadow">
-                    <img src="./img/utinga.jpg" class="card-img-top" alt="docas_img">
-                    <div class="card-body text-dark">
-                        <h5 class="card-title text-success">Parque do Utinga</h5>
-                        <p class="card-text">Localizado na cidade de Belém, capital do estado do Pará. Este parque é um símbolo de diversidade biológica presente na região amazônica.</p>
-                        <a href="./pages/places/utinga.html" class="btn btn-outline-warning">Ir à página</a>
+            </div><br>
+            <div class="popular">
+                <p><h4 style="text-align:center;">Locais Populares</h4></p>
+                <div class="card-deck">
+                    <div style="width: 18rem;" class="card border-success">
+                        <img src="./img/liberdade.jpg" class="card-img-top" alt="liberdade_img">
+                        <div class="card-body text-dark shadow">
+                            <h5 class="card-title text-success">Bairro da Liberdade</h5>
+                            <p class="card-text">Localizado na capital do estado de São Paulo. O bairro é famoso pela rica cultura oriental e abriga a maior comunidade asiática do país.</p>
+                            <a href="#" class="btn btn-outline-warning">Ir à página</a>
+                        </div>
                     </div>
-                </div>
-                <div style="width: 18rem;" class="card border-success shadow">
-                    <img src="./img/iracema.jpg" class="card-img-top" alt="iracema_img">
-                    <div class="card-body text-dark">
-                        <h5 class="card-title text-success">Praia de Iracema</h5>
-                        <p class="card-text">Localizado na cidade de Forataleza, capital do estado do Ceará. Na orla urbana de Fortaleza, é uma das principais praias da cidade e abriga grandes eventos.</p>
-                        <a href="#" class="btn btn-outline-warning">Ir à página</a>
+                    <div style="width: 18rem;" class="card border-success shadow">
+                        <img src="./img/utinga.jpg" class="card-img-top" alt="docas_img">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title text-success">Parque do Utinga</h5>
+                            <p class="card-text">Localizado na cidade de Belém, capital do estado do Pará. Este parque é um símbolo de diversidade biológica presente na região amazônica.</p>
+                            <a href="./pages/places/utinga.html" class="btn btn-outline-warning">Ir à página</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <section class="ads">
-            <label style="float:right;">[Anúncio]</label>
-            <a href="#ads"><img style="width: 500px;" src="./img/ads/placeholder.gif"></a>
-        </section>
-        <br><br>
-    </main>
-    <footer class="bg-success text-light">
-        <h5 style="margin-left: 1%">
-            <strong>Sobre esse site:</strong>
-        </h5>
-        <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
-            <img src="./img/icons/feedback_icon.png">
-        </button>
-        <div class="modal fade feedback" id="feedback_modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered text-light" role="document">
-                <div class="modal-content">
-                    <div class="modal-header bg-success">
-                        <h5 class="modal-title">Feedback</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-dark">
-                        <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
-                            <h5>Deixe seu feedback aqui:</h5>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
-                                <label class="custom-control-label" for="customRadio1">Sugestão</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="problem">
-                                <label class="custom-control-label" for="customRadio2">Relatar um problema</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="info">
-                                <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
-                            </div><br>
-                            <h6>Selecione qual navegador está sendo utilizado:</h6>
-                            <div id="optionError"></div>
-                            <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
-                                <option value="">Selecione um navegador</option>
-                                <option value="Chromium">Google Chrome</option>
-                                <option value="Gecko">Mozilla Firefox</option>
-                                <option value="EdgeHTML">Microsoft Edge</option>
-                                <option value="Webkit">Apple Safari</option>
-                            </select><br><br>
-                            <h6>Deixe seus comentários abaixo:</h6>
-                            <div class="form-group">
-                                <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui" name="comentary"></textarea>
-                            </div>
-                        </form>
-                        <span id="feedback_msg"></span>
-                    </div>
-                    <div class="modal-footer bg-success" id="feedback_send">
-                        <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
+                    <div style="width: 18rem;" class="card border-success shadow">
+                        <img src="./img/iracema.jpg" class="card-img-top" alt="iracema_img">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title text-success">Praia de Iracema</h5>
+                            <p class="card-text">Localizado na cidade de Forataleza, capital do estado do Ceará. Na orla urbana de Fortaleza, é uma das principais praias da cidade e abriga grandes eventos.</p>
+                            <a href="#" class="btn btn-outline-warning">Ir à página</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <label style="margin-left: 2%;">Instituição: CESUPA Argo;</label><br>
-        <label style="margin-left: 2%;">Orientador: Marcos Paulo;</label><br>
-        <label style="margin-left: 2%;">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
-        <iframe style="display: none;" name="iframe"></iframe>
-    </footer>
-    <script src="./dependencies/jquery-3.0.0.min.js"></script>
-    <script src="./dependencies/bootstrap.min.js"></script>
-    <script src="./scripts/main.js"></script>
-</body>
+            <br><br>
+            <section class="ads">
+                <label style="float:right;">[Anúncio]</label>
+                <a href="#ads"><img style="width: 500px;" src="./img/ads/placeholder.gif"></a>
+            </section>
+            <br><br>
+        </main>
+        <footer class="bg-success text-light">
+            <h5 style="margin-left: 1%">
+                <strong>Sobre esse site:</strong>
+            </h5>
+            <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
+                <img src="./img/icons/feedback_icon.png">
+            </button>
+            <div class="modal fade feedback" id="feedback_modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered text-light" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 class="modal-title">Feedback</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
+                                <h5>Deixe seu feedback aqui:</h5>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
+                                    <label class="custom-control-label" for="customRadio1">Sugestão</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="problem">
+                                    <label class="custom-control-label" for="customRadio2">Relatar um problema</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="info">
+                                    <label class="custom-control-label" for="customRadio3">Corrijir informações</label>
+                                </div><br>
+                                <h6>Selecione qual navegador está sendo utilizado:</h6>
+                                <div id="optionError"></div>
+                                <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
+                                    <option value="">Selecione um navegador</option>
+                                    <option value="Chromium">Google Chrome</option>
+                                    <option value="Gecko">Mozilla Firefox</option>
+                                    <option value="EdgeHTML">Microsoft Edge</option>
+                                    <option value="Webkit">Apple Safari</option>
+                                </select><br><br>
+                                <h6>Deixe seus comentários abaixo:</h6>
+                                <div class="form-group">
+                                    <textarea class="form-control border-primary" id="exampleFormControlTextarea1" rows="5" placeholder="Deixe seus comentários aqui" name="comentary"></textarea>
+                                </div>
+                            </form>
+                            <span id="feedback_msg"></span>
+                        </div>
+                        <div class="modal-footer bg-success" id="feedback_send">
+                            <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label style="margin-left: 2%;">Instituição: CESUPA Argo;</label><br>
+            <label style="margin-left: 2%;">Orientador: Marcos Paulo;</label><br>
+            <label style="margin-left: 2%;">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+            <iframe style="display: none;" name="iframe"></iframe>
+        </footer>
+        <script src="./dependencies/jquery-3.0.0.min.js"></script>
+        <script src="./dependencies/bootstrap.min.js"></script>
+        <script src="./scripts/main.js"></script>
+    </body>
 </html>
