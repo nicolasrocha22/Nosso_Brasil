@@ -18,7 +18,7 @@ Está plataforma estará disponível tanto para o usuário comum como para donos
 
 - Visualizar em tempo real um ponto turistíco ou estabelecimento;
 - Exibir informações como clima, localização, horário local;
-- Avaliar o local;
+- Avaliação do local;
 
 ## Equipe
 
