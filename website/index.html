@@ -5,6 +5,7 @@
         <meta name="author" content="Mateus Alberio, Nícolas Rocha, Paula Martins">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-signin-client_id" content="248164948234-ufloc99802k8ehkmmek9g6cb5acmrsji.apps.googleusercontent.com">
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/index.css">
         <link rel="stylesheet" href="./dependencies/bootstrap.min.css">
@@ -30,7 +31,10 @@
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <button type="button" class="btn btn-success btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">Fazer Login</button>
+                        <button type="button" class="btn btn-success btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">
+                            <span id="account_placeholder">Fazer Login</span>
+                            <div id="account_display"></div>
+                        </button>
                         <span style="visibility: hidden;">...</span>
                         <div class="input-group">
                             <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -53,12 +57,17 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <br><br><br><br><br>
-                            <p style="text-align: center;">[Account_Placeholder]</p>
-                            <br><br><br><br><br>
+                            <div id="signin_box">
+                                <h5>Faça login com sua conta do Google</h5>
+                                <br><br><br><br>
+                                <div id="google_btn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                                <br><br><br><br>
+                            </div>
+                            <div id="account_box"></div>
                         </div>
                         <div class="modal-footer bg-success text-light">
-                            <button type="button" class="btn btn-warning">Login</button>
+                            <span id="signout_btn"></span>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
                         </div>
                     </div>
                 </div>
@@ -168,6 +177,8 @@
         </footer>
         <script src="./dependencies/jquery-3.0.0.min.js"></script>
         <script src="./dependencies/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="./dependencies/google_auth.js"></script>
         <script src="./scripts/main.js"></script>
     </body>
 </html>

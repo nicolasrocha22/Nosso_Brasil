@@ -2,6 +2,18 @@
     font-family: Candara;
 }
 
+#google_btn {
+    position: relative;
+    margin-left: 37%;
+}
+
+#account_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+}
+
 h1 { 
     font-size: 49px; 
     font-weight: 700; 
