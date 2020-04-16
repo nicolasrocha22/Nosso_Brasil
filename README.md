@@ -1,4 +1,4 @@
-# Nosso Brasil (Nome Provisório)
+# Nosso Brasil
 
 O nosso projeto visa divulgar o turismo em regiões menos famosas do país como as
 regiões: Norte, Centro-Oeste e Sul.\
