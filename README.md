@@ -30,6 +30,10 @@ Está plataforma estará disponível tanto para o usuário comum como para donos
 
 Este projeto está licenciado sob a MIT License - Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
+## Links
+
+- [Trello](https://trello.com/b/M55VnoBp/projeto-integrado-i)
+
 ## Créditos
 
 - **Orientador:** Marcos Paulo Alves de Sousa
