@@ -1,0 +1,21 @@
+{
+    "name": "Nosso Brasil",
+    "authors": [
+        {
+            "name": "Mateus Alberio",
+            "role": "Developer"
+        },
+        {
+            "name": "Nícolas Rocha",
+            "role": "Developer"
+        },
+        {
+            "name": "Paula Martins",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT License",
+    "require": {
+        "php": ">= 7.2.0"
+    }
+}
