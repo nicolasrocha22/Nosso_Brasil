@@ -1,15 +1,15 @@
 # Nosso Pará
 
-O nosso projeto visa divulgar o turismo no estado do Pará.\
+O nosso projeto visa divulgar o turismo no estado do Pará.<br>
 Também para dar uma fonte precisa de como está um certo estabelecimento como restaurantes, pubs 
-e casas de festas para as pessoas poderem ser informadas.\
+e casas de festas para as pessoas poderem ser informadas.<br>
 Estamos desenvolvendo uma plataforma que exibirá em tempo real algumas informações como a movimentação, clima, 
 horário local e localização de um ponto turístico ou estabelecimento.
 
 ## Descrição
 
 Na plataforma mostrará algumas informações em tempo real de um local ou estabelecimento, o usuário pode consultar 
-para ver como está o local naquele momento para decidir se irá ou não.\
+para ver como está o local naquele momento para decidir se irá ou não.<br>
 Está plataforma estará disponível tanto para o usuário comum como para donos de estabelecimentos para divulgarem 
 os seus lugares na plataforma.
 
@@ -21,8 +21,8 @@ os seus lugares na plataforma.
 
 ## Equipe
 
-- Nícolas de Oliveira Rocha (nicolasrocha22)
 - Mateus Alberio Ribeiro (mateusalberio)
+- Nícolas de Oliveira Rocha (nicolasrocha22)
 - Paula D'Nazaré da Silva Martins (paulamartinss)
 
 ## Licença
