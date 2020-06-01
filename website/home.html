@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/home.css">
         <link rel="stylesheet" href="./dependencies/bootstrap.min.css">
-        <title>Nosso Brasil</title>
+        <title>Nosso Pará</title>
     </head>
     <body>
         <header>
-            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
-                <span class="navbar-brand mb-0 h1">Nosso Brasil</span>
+            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-danger">
+                <span class="navbar-brand mb-0 h1">Nosso Pará</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,7 +31,7 @@
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <button type="button" class="btn btn-success btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">
+                        <button type="button" class="btn btn-danger btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">
                             <span id="account_placeholder">Fazer Login</span>
                             <div id="account_display"></div>
                         </button>
@@ -39,7 +39,7 @@
                         <div class="input-group">
                             <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button type="button" class="btn btn-warning">
+                                <button type="button" class="btn btn-primary">
                                     <img style="width: 20px;" src="./img/icons/search_icon.png">
                                 </button>
                             </div>
@@ -50,7 +50,7 @@
             <div class="modal fade" id="account_modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-success text-light">
+                        <div class="modal-header bg-danger text-light">
                             <h5 class="modal-title">Conta</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
                                 <span aria-hidden="true">&times;</span>
@@ -65,9 +65,9 @@
                             </div>
                             <div id="account_box"></div>
                         </div>
-                        <div class="modal-footer bg-success text-light">
+                        <div class="modal-footer bg-danger text-light">
                             <span id="signout_btn"></span>
-                            <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
                         </div>
                     </div>
                 </div>
@@ -78,34 +78,34 @@
                 <img id="welcome_img" src="./img/welcome.jpg" alt="welcome_img">
                 <div id="welcome_text">
                     <h4>Bem-vindo ao nosso projeto!</h4>
-                    <p>Veja várias maravilhas do Brasil ao vivo pelo nosso site.</p>
+                    <p>...</p>
                 </div>
             </div><br>
             <div class="popular">
                 <p><h4 style="text-align:center;">Locais Populares</h4></p>
                 <div class="card-deck">
-                    <div style="width: 18rem;" class="card border-success">
-                        <img src="./img/liberdade.jpg" class="card-img-top" alt="liberdade_img">
+                    <div style="width: 18rem;" class="card border-danger">
+                        <img src="./img/docas.jpg" class="card-img-top" alt="docas_img">
                         <div class="card-body text-dark shadow">
-                            <h5 class="card-title text-success">Bairro da Liberdade</h5>
-                            <p class="card-text">Localizado na capital do estado de São Paulo. O bairro é famoso pela rica cultura oriental e abriga a maior comunidade asiática do país.</p>
-                            <a href="#" class="btn btn-outline-warning">Ir à página</a>
+                            <h5 class="card-title text-primary">Estação das Docas</h5>
+                            <p class="card-text">...</p>
+                            <a href="#" class="btn btn-outline-primary">Ir à página</a>
                         </div>
                     </div>
-                    <div style="width: 18rem;" class="card border-success shadow">
+                    <div style="width: 18rem;" class="card border-danger shadow">
                         <img src="./img/utinga.jpg" class="card-img-top" alt="docas_img">
                         <div class="card-body text-dark">
-                            <h5 class="card-title text-success">Parque do Utinga</h5>
+                            <h5 class="card-title text-primary">Parque do Utinga</h5>
                             <p class="card-text">Localizado na cidade de Belém, capital do estado do Pará. Este parque é um símbolo de diversidade biológica presente na região amazônica.</p>
-                            <a href="./pages/places/utinga.html" class="btn btn-outline-warning">Ir à página</a>
+                            <a href="./pages/places/utinga.html" class="btn btn-outline-primary">Ir à página</a>
                         </div>
                     </div>
-                    <div style="width: 18rem;" class="card border-success shadow">
-                        <img src="./img/iracema.jpg" class="card-img-top" alt="iracema_img">
+                    <div style="width: 18rem;" class="card border-danger shadow">
+                        <img src="./img/nazare.jpg" class="card-img-top" alt="nazare_img">
                         <div class="card-body text-dark">
-                            <h5 class="card-title text-success">Praia de Iracema</h5>
-                            <p class="card-text">Localizado na cidade de Forataleza, capital do estado do Ceará. Na orla urbana de Fortaleza, é uma das principais praias da cidade e abriga grandes eventos.</p>
-                            <a href="#" class="btn btn-outline-warning">Ir à página</a>
+                            <h5 class="card-title text-primary">Basílica de Nazaré</h5>
+                            <p class="card-text">...</p>
+                            <a href="#" class="btn btn-outline-primary">Ir à página</a>
                         </div>
                     </div>
                 </div>
@@ -117,17 +117,17 @@
             </section>
             <br><br>
         </main>
-        <footer class="bg-success text-light">
+        <footer class="bg-danger text-light">
             <h5 style="margin-left: 1%">
                 <strong>Sobre esse site:</strong>
             </h5>
-            <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
+            <button type="submit" class="btn btn-primary" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
                 <img src="./img/icons/feedback_icon.png">
             </button>
             <div class="modal fade feedback" id="feedback_modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered text-light" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-success">
+                        <div class="modal-header bg-danger">
                             <h5 class="modal-title">Feedback</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
                                 <span aria-hidden="true">&times;</span>
@@ -164,8 +164,8 @@
                             </form>
                             <span id="feedback_msg"></span>
                         </div>
-                        <div class="modal-footer bg-success" id="feedback_send">
-                            <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
+                        <div class="modal-footer bg-danger" id="feedback_send">
+                            <input type="submit" class="btn btn-primary" value="Enviar" form="feedback_box">
                         </div>
                     </div>
                 </div>

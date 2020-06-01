@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/places.css">
         <link rel="stylesheet" href="../dependencies/bootstrap.min.css">
-        <title>Nosso Brasil</title>
+        <title>Nosso Pará</title>
     </head>
     <body onload="showList()">
         <header>
-            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
-                <span class="navbar-brand mb-0 h1">Nosso Brasil</span>
+            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-danger">
+                <span class="navbar-brand mb-0 h1">Nosso Pará</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,7 +31,7 @@
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <button type="button" class="btn btn-success btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">
+                        <button type="button" class="btn btn-danger btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">
                             <span id="account_placeholder">Fazer Login</span>
                             <div id="account_display"></div>
                         </button>
@@ -39,7 +39,7 @@
                         <div class="input-group">
                             <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button type="button" class="btn btn-warning">
+                                <button type="button" class="btn btn-primary">
                                     <img style="width: 20px;" src="../img/icons/search_icon.png">
                                 </button>
                             </div>
@@ -50,7 +50,7 @@
             <div class="modal fade" id="account_modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-success text-light">
+                        <div class="modal-header bg-danger text-light">
                             <h5 class="modal-title">Conta</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
                                 <span aria-hidden="true">&times;</span>
@@ -65,9 +65,9 @@
                             </div>
                             <div id="account_box"></div>
                         </div>
-                        <div class="modal-footer bg-success text-light">
+                        <div class="modal-footer bg-danger text-light">
                             <span id="signout_btn"></span>
-                            <button type="button" class="btn btn-warning">Login</button>
+                            <button type="button" class="btn btn-primary">Login</button>
                         </div>
                     </div>
                 </div>
@@ -75,28 +75,19 @@
         </header>
         <main style="margin-top: 50px;">
             <br>
-            <h1 style="margin-left: 1%;" class="text-success">Locais</h1>
+            <h1 style="margin-left: 1%;" class="text-primary">Locais</h1>
             <p class="places_text">Selecione abaixo se deseja ver um ponto turístico ou um estabelecimento</p>
             <div style="margin-left: 2%;" class="filter">
                 <p>
-                    <div style="margin-left: 2%;" class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" id="tourism_btn" class="btn btn-outline-warning">Pontos Turísticos</button>
-                        <button type="button" id="local_btn" class="btn btn-outline-warning">Estabelecimentos</button>
+                    <div style="margin-left: 2%;" class="btn-group" role="group">
+                        <button type="button" id="tourism_btn" class="btn btn-outline-primary">Pontos Turísticos</button>
+                        <button type="button" id="local_btn" class="btn btn-outline-primary">Estabelecimentos</button>
                     </div>
                     <span id="filter_span"></span>
                 </p>
                 <div class="collapse" id="collapseExample">
-                    <div class="card card-body border-warning" id="filter">
+                    <div class="card card-body border-primary" id="filter">
                         <form style="margin-left: 1%;" class="form-inline" id="tourism_filter">
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
-                            <select class="custom-select my-1 mr-sm-2 border-primary" id="region" onload="showList()">
-                                <option></option>
-                                <option value="Norte">Norte</option>
-                                <option value="Nordeste">Nordeste</option>
-                                <option value="Centro">Centro-Oeste</option>
-                                <option value="Sudeste">Suldeste</option>
-                                <option value="Sul">Sul</option>
-                            </select>
                             <label style="margin-left: 2%;" class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione um filtro:</label>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
                                 <option></option>
@@ -106,15 +97,6 @@
                             </select>
                         </form>
                         <form style="margin-left: 1%;" class="form-inline" id="local_filter">
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione uma região:</label>
-                            <select class="custom-select my-1 mr-sm-2 border-primary" id="region">
-                                <option></option>
-                                <option value="Norte">Norte</option>
-                                <option value="Nordeste">Nordeste</option>
-                                <option value="Centro">Centro-Oeste</option>
-                                <option value="Sudeste">Suldeste</option>
-                                <option value="Sul">Sul</option>
-                            </select>
                             <label style="margin-left: 2%;" class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione um filtro:</label>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
                                 <option></option>
@@ -132,34 +114,34 @@
             </section>
             <div class="list-group" id="list">
                 <span id="list1">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list2">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list3">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list4">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list5">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list6">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list7">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list8">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list9">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
                 <span id="list10">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-success">...</a>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
                 </span>
             </div>
             <br><br>
@@ -169,17 +151,17 @@
             </section>
             <br><br>
         </main>
-        <footer class="bg-success text-light">
+        <footer class="bg-danger text-light">
             <h5 style="margin-left: 1%">
                 <strong>Sobre esse site:</strong>
             </h5>
-            <button type="submit" class="btn btn-warning" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
+            <button type="submit" class="btn btn-primary" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
                 <img src="../img/icons/feedback_icon.png">
             </button>
             <div class="modal fade feedback" id="feedback_modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered text-light" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-success">
+                        <div class="modal-header bg-danger">
                             <h5 class="modal-title">Feedback</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
                                 <span aria-hidden="true">&times;</span>
@@ -216,8 +198,8 @@
                             </form>
                             <span id="feedback_msg"></span>
                         </div>
-                        <div class="modal-footer bg-success" id="feedback_send">
-                            <input type="submit" class="btn btn-warning" value="Enviar" form="feedback_box">
+                        <div class="modal-footer bg-danger" id="feedback_send">
+                            <input type="submit" class="btn btn-primary" value="Enviar" form="feedback_box">
                         </div>
                     </div>
                 </div>
