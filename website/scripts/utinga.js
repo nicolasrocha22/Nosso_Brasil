@@ -41,3 +41,31 @@ function iframeHeight() {
 
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 }
+
+function displayCommentary() {
+    let text = document.querySelector("textarea#commentary_text").value;
+    let commentary = document.getElementById("commentary_area");
+
+    if(text != "") {
+        commentary.innerHTML += `
+            <br>
+            <div class="card commentary_card border-danger shadow" id="commentary_box">
+                <div class="card-header border-danger">
+                    <h5>Usuário</h5>
+                    <div>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p id="comment">
+                        <span style="color: black;">${text}</span>
+                    </p>
+                </div>
+            </div>
+        `
+    }
+}

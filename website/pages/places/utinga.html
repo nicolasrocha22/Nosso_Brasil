@@ -76,22 +76,22 @@
         </header>
         <main style="margin-top: 50px;">
             <br>
-            <!--<section style="top: 270px;" class="ads2">
+            <section style="top: 270px;" class="ads2">
                 <label style="float:right;">[Anúncio]</label>
                 <a href="#ads"><img style="width: 200px;" src="../../img/ads/placeholder2.gif"></a>
-            </section>-->
-            <h1 style="margin-left: 1%;" class="text-primary">Parque do Utinga</h1><br>
-            <p class="about_text">
-                Localizado no coração da Região Metropolitana de Belém, Estado do Pará, Brasil, o Parque Estadual do Utinga é a unidade-símbolo
-                da diversidade biológica presente na Região Amazônica. O parque ambiental chama a atenção por sua ampla e peculiar biodiversidade,
-                ao mesmo tempo em que representa uma das regiões mais ameaçadas da Amazônia Legal, por conta da dinâmica de avanço e de consolidação
-                da segunda maior zona urbana da Região Norte do País.
-            </p>
-            <br><br>
+            </section>
+            <h1 style="margin-left: 2%;" class="text-primary">Parque do Utinga</h1><br>
+            <div class="card border-danger about_text">
+                <div class="card-body shadow">
+                    Localizado no coração da Região Metropolitana de Belém, Estado do Pará, Brasil, o Parque Estadual do Utinga é a unidade-símbolo
+                    da diversidade biológica presente na Região Amazônica. O parque ambiental chama a atenção por sua ampla e peculiar biodiversidade,
+                    ao mesmo tempo em que representa uma das regiões mais ameaçadas da Amazônia Legal, por conta da dinâmica de avanço e de consolidação
+                    da segunda maior zona urbana da Região Norte do País.
+                </div>
+            </div><br>
             <div class="card border-danger" id="camera_view">
-                <br><br><br><br><br><br><br>
-                <p style="text-align: center;">Thermometer [Placeholder]</p>
-                <br><br><br><br><br><br><br>
+                <img class="card-img-top" src="../../img/utinga.jpg" alt="Card image cap">
+                <p style="margin-left: 3%;">Fonte da Imagem: ...</p>
                 <div class="card-body shadow">
                     <h5 style="font-weight: 600;" class="card-title text-primary">Informações</h5>
                     <p style="display: inline;" class="card-text">
@@ -106,8 +106,16 @@
                         </div>
                     </p>
                 </div>
+            </div><br><br>
+            <div class="card border-danger shadow" id="camera_view">
+                <div class="card-body">
+                    <h3 class="card-title text-primary">Termômetro</h3>
+                    <br><br><br>
+                    <h2 style="text-align: center;">[Termômetro]</h2>
+                    <br><br><br>
+                </div>
             </div>
-            <br><br><br><br>
+            <br><br>
             <div class="card-deck" id="info">
                 <div class="card border-danger">
                     <div class="card-body shadow">
@@ -124,7 +132,24 @@
                     </div>
                 </div>
             </div>
-            <br><br><br>
+            <br><br>
+            <div class="card border-danger" id="commentary_box">
+                <div class="card-body shadow">
+                    <h3 class="card-title text-primary">Comentários e Avaliação</h3>
+                    <div>
+                        <label>Avaliação: </label>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <textarea class="form-control border-primary" id="commentary_text" rows="3"></textarea><br>
+                    <input type="button" class="btn btn-outline-primary" value="Comentar" onclick="displayCommentary()">
+                </div>
+            </div>
+            <span id="commentary_area"></span>
+            <br><br>
             <section class="ads">
                 <label style="float:right;">[Anúncio]</label>
                 <a href="#ads"><img style="width: 500px;" src="../../img/ads/placeholder.gif"></a>

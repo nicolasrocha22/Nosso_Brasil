@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/places.css">
         <link rel="stylesheet" href="../dependencies/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Nosso Pará</title>
     </head>
     <body onload="showList()">
@@ -75,7 +76,7 @@
         </header>
         <main style="margin-top: 50px;">
             <br>
-            <h1 style="margin-left: 1%;" class="text-primary">Locais</h1>
+            <h1 style="margin-left: 2%;" class="text-primary">Locais</h1>
             <p class="places_text">Selecione abaixo se deseja ver um ponto turístico ou um estabelecimento</p>
             <div style="margin-left: 2%;" class="filter">
                 <p>
@@ -86,7 +87,7 @@
                     <span id="filter_span"></span>
                 </p>
                 <div class="collapse" id="collapseExample">
-                    <div class="card card-body border-primary" id="filter">
+                    <div class="card card-body border-primary shadow" id="filter">
                         <form style="margin-left: 1%;" class="form-inline" id="tourism_filter">
                             <label style="margin-left: 2%;" class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione um filtro:</label>
                             <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref">
@@ -112,37 +113,39 @@
                 <label style="float:right;">[Anúncio]</label>
                 <a href="#ads"><img style="width: 200px;" src="../img/ads/placeholder2.gif"></a>
             </section>
-            <div class="list-group" id="list">
-                <span id="list1">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list2">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list3">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list4">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list5">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list6">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list7">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list8">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list9">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
-                <span id="list10">
-                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>
-                </span>
+            <div class="card border-info shadow" id="list">
+                <div class="list-group list-group-flush">
+                    <span id="list1">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list2">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list3">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list4">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list5">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list6">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list7">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list8">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list9">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                    <span id="list10">
+                        <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+                    </span>
+                </div>
             </div>
             <br><br>
             <section class="ads">

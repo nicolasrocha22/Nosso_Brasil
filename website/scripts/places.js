@@ -22,70 +22,36 @@ function showList() {
         tourism_filter.style.display = null;
         local_filter.style.display = "none";
 
-        //let region = document.querySelector("select#region");
-
-        document.querySelector("span#list1").innerHTML = '<a href="./places/utinga.html" class="list-group-item list-group-item-action list-group-item-primary">Parque do Utinga</a>'
-        document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Estação das Docas</a>'
-        document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Ver-o-Peso</a>';
-        document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Praça Batista Campos</a>';
-        document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Museum Emílio Goeldi</a>';
-        document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Praia de Algodoal</a>';
-        document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>'
-        document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>'
-        document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>'
-        document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>'
-
-        /*
-        region.onclick = function() {
-            if(region.value == "Norte") {
-                
-            } else if(region.value == "Nordeste") {
-                document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-            } else if(region.value == "Centro") {
-                document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-            } else if(region.value == "Sudeste") {
-                document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-            } else if(region.value == "Sul") {
-                document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-                document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">...</a>';
-            }
-        }
-        */
+        document.querySelector("span#list1").innerHTML = `
+            <a href="./places/utinga.html" class="list-group-item list-group-item-action list-group-item">Parque do Utinga</a>
+        `;
+        document.querySelector("span#list2").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">Estação das Docas</a>
+        `;
+        document.querySelector("span#list3").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">Ver-o-Peso</a>
+        `;
+        document.querySelector("span#list4").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">Praça Batista Campos</a>
+        `;
+        document.querySelector("span#list5").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">Museum Emílio Goeldi</a>
+        `;
+        document.querySelector("span#list6").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">Praia de Algodoal</a>
+        `;
+        document.querySelector("span#list7").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+        `;
+        document.querySelector("span#list8").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+        `;
+        document.querySelector("span#list9").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+        `;
+        document.querySelector("span#list10").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+        `;
     }
     
     local.onclick = function() {
@@ -100,15 +66,15 @@ function showList() {
         tourism_filter.style.display = "none";
         local_filter.style.display = null;
 
-        document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 1</a>';
-        document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 2</a>';
-        document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 3</a>';
-        document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 4</a>';
-        document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 5</a>';
-        document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 6</a>';
-        document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 7</a>';
-        document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 8</a>';
-        document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 9</a>';
-        document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item-primary">Local 10</a>';
+        document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 1</a>';
+        document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 2</a>';
+        document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 3</a>';
+        document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 4</a>';
+        document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 5</a>';
+        document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 6</a>';
+        document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 7</a>';
+        document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 8</a>';
+        document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 9</a>';
+        document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 10</a>';
     }
 }
