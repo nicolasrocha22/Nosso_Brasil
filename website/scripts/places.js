@@ -22,35 +22,127 @@ function showList() {
         tourism_filter.style.display = null;
         local_filter.style.display = "none";
 
+        document.querySelector("div#places_text").innerHTML = "";
+
         document.querySelector("span#list1").innerHTML = `
-            <a href="./places/utinga.html" class="list-group-item list-group-item-action list-group-item">Parque do Utinga</a>
+            <a href="./places/utinga.html" class="list-group-item list-group-item-action list-group-item">
+                <label>Parque do Utinga</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list2").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">Estação das Docas</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Estação das Docas</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list3").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">Ver-o-Peso</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Ver-o-Peso</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list4").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">Praça Batista Campos</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Praça Batista Campos</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list5").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">Museum Emílio Goeldi</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Museum Emílio Goeldi</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list6").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">Praia de Algodoal</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Praia de Algodoal</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list7").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Mangal das Garças</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list8").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 8</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list9").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 9</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
         document.querySelector("span#list10").innerHTML = `
-            <a href="" class="list-group-item list-group-item-action list-group-item">...</a>
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 10</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
         `;
     }
     
@@ -66,15 +158,118 @@ function showList() {
         tourism_filter.style.display = "none";
         local_filter.style.display = null;
 
-        document.querySelector("span#list1").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 1</a>';
-        document.querySelector("span#list2").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 2</a>';
-        document.querySelector("span#list3").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 3</a>';
-        document.querySelector("span#list4").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 4</a>';
-        document.querySelector("span#list5").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 5</a>';
-        document.querySelector("span#list6").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 6</a>';
-        document.querySelector("span#list7").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 7</a>';
-        document.querySelector("span#list8").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 8</a>';
-        document.querySelector("span#list9").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 9</a>';
-        document.querySelector("span#list10").innerHTML = '<a href="" class="list-group-item list-group-item-action list-group-item">Local 10</a>';
+        document.querySelector("div#places_text").innerHTML = "A câmera não está disponivel para estabelecimentos";
+
+        document.querySelector("span#list1").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 1</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list2").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 2</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list3").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 3</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list4").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 4</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list5").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 5</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list6").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 6</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list7").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 7</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list8").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 8</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list9").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 9</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>`;
+        document.querySelector("span#list10").innerHTML = `
+            <a href="" class="list-group-item list-group-item-action list-group-item">
+                <label>Local 10</label>
+                <div style="float: right;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </a>
+        `;
     }
 }
