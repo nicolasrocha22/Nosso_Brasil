@@ -1,8 +1,15 @@
 # Nosso Pará
 
+![website](./images/website.png)
+
 O nosso projeto visa divulgar o turismo no estado do Pará.<br>
 Também para dar uma fonte precisa de como está um certo estabelecimento como restaurantes, pubs e casas de festas para as pessoas poderem ser informadas.<br>
 Estamos desenvolvendo uma plataforma que exibirá em tempo real uma transmissão ao vivo de um ponto turístico e algumas informações como o clima, horário local e localização de um ponto turístico ou estabelecimento.
+
+Nesse repositório contém o código fonte do:
+
+- [Website](./website)
+- [Aplicação](./src)
 
 ## Descrição
 
@@ -11,9 +18,9 @@ Está plataforma estará disponível tanto para o usuário comum como para donos
 
 ## Características
 
-- Vizualizar em tempo real um ponto turístico;
-- Ver informações como clima, localização e horário local;
-- Avaliação dos locais;
+- Visualizar em tempo real um ponto turístico
+- Ver informações como clima, localização e horário local
+- Avaliação dos locais
 
 ## Equipe
 
