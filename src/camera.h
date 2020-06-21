@@ -29,11 +29,11 @@ void cameraAction() {
             while((getchar()) != '\n');
 
             if(option == 49) {
-                ip = (char *) malloc(16 * sizeof(char));
+                ip = (char *) malloc(17 * sizeof(char));
                 printf("\n\nDigite o ip da câmera: ");
-                fgets(ip, 16, stdin);
+                fgets(ip, 17, stdin);
                 if(chromium == 0) {
-                    strcpy(command, "chromium ");
+                    strcpy(command, "chromium --no-sandbox ");
                     strcat(command, ip);
                     system(command);
                 } else {
