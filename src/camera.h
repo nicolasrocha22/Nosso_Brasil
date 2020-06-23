@@ -35,6 +35,7 @@ void cameraAction() {
                 if(chromium == 0) {
                     strcpy(command, "chromium --no-sandbox ");
                     strcat(command, ip);
+                    strcat(command, "/video");
                     system(command);
                 } else {
                     printf("\n\n[ERROR]::Para abrir a câmera é necessário ter o chromium!");
