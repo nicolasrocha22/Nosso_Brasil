@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="google-signin-client_id" content="248164948234-ufloc99802k8ehkmmek9g6cb5acmrsji.apps.googleusercontent.com">
+        <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="../../styles/main.css">
         <link rel="stylesheet" href="../../styles/utinga.css">
         <link rel="stylesheet" href="../../dependencies/bootstrap.min.css">
@@ -76,9 +77,12 @@
         </header>
         <main style="margin-top: 50px;">
             <br>
-            <section style="top: 300px;" class="ads2">
-                <label style="float:right;">[Anúncio]</label>
-                <a href="#ads"><img style="width: 200px;" src="../../img/ads/placeholder2.gif"></a>
+            <section style="top: 300px;" class="ads_v">
+                <a href="#ads">
+                    <div class="card mb-3 shadow">
+                        <img src="../../img/ads/placeholder2.gif" class="card-img-top" alt="ads">
+                    </div>
+                </a>
             </section>
             <h1 style="margin-left: 2%;" class="text-primary">Parque do Utinga</h1><br>
             <div class="card border-danger about_text">
@@ -91,19 +95,22 @@
                 </div>
             </div><br>
             <div class="card border-danger" id="camera_view">
-                <img class="card-img-top" src="../../img/utinga.jpg" alt="Card image cap">
+                <img class="card-img-top" src="http://192.168.0.2:8080/video" alt="camera_view" onerror="this.onerror=null; this.src='../../img/camera_placeholder.png';">
                 <div class="card-body shadow">
                     <h5 style="font-weight: 600;" class="card-title text-primary">Informações</h5>
                     <p style="display: inline;" class="card-text">
-                        Horário Local: <span id="clock"></span>
+                        <strong>Horário Local: </strong><span id="clock"></span>
                         <div id="rating">
-                            <label>Avaliação: </label>
+                            <label><strong>Avaliação: </strong></label>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
+                    </p>
+                    <p>
+                        <strong>Horário de Funcionamento:</strong>
                     </p>
                 </div>
             </div><br><br>
@@ -141,31 +148,60 @@
             </div>
             <span id="commentary_area"></span>
             <br><br>
-            <section class="ads">
-                <label style="float:right;">[Anúncio]</label>
-                <a href="#ads"><img style="width: 500px;" src="../../img/ads/placeholder.gif"></a>
+            <section class="ads_h">
+                <a href="#ads">
+                    <div class="card mb-3 shadow">
+                        <img src="../../img/ads/placeholder.gif" class="card-img-top" alt="ads">
+                    </div>
+                </a>
             </section>
             <br><br>
         </main>
         <footer class="bg-danger text-light">
             <h5 style="margin-left: 1%">
-                <strong>Sobre esse site:</strong>
+                <strong>Nosso Pará</strong>
             </h5>
-            <button type="submit" class="btn btn-primary" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
-                <img src="../../img/icons/feedback_icon.png">
-            </button>
-            <div class="modal fade feedback" id="feedback_modal" tabindex="-1" role="dialog">
+            <label id="footer_text">Veja informações sobre vários pontos turísticos e estabelecimentos do Pará no nosso site.</label>
+            <p id="links">
+                <a class="btn btn-sm btn-primary" role="button" href="../../home.html">Início</a>
+                <button type="button" id="feedback_btn" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#feedback_box">Feedback</button>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#credits_box">Créditos</button>
+            </p>
+            <div class="modal fade" id="credits_box" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" id="credit_content">
+                        <div class="modal-header bg-danger text-light">
+                            <h5 class="modal-title">Créditos</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            <h5>Sobre o site:</h5><br>
+                            <label style="margin-left: 2%;"><strong>Instituição: </strong>Cesupa ARGO;</label><br>
+                            <label style="margin-left: 2%;"><strong>Orientador: </strong>Marcos Paulo;</label><br>
+                            <label style="margin-left: 2%;"><strong>Equipe: </strong>Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+                            <br><br><br>
+                        </div>
+                        <div class="modal-footer bg-danger">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade feedback" id="feedback_box" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered text-light" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-danger">
+                        <div class="modal-header bg-danger text-light">
                             <h5 class="modal-title">Feedback</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body text-dark">
-                            <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
+                            <form action="../../actions/feedback.php" name="feedback" id="feedback_form" method="get" target="iframe" onsubmit="return validateFeedback()" required>
                                 <h5>Deixe seu feedback aqui:</h5>
+                                <h6>Marque a classificação do seu feedback:</h6>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
                                     <label class="custom-control-label" for="customRadio1">Sugestão</label>
@@ -181,7 +217,7 @@
                                 <h6>Selecione qual navegador está sendo utilizado:</h6>
                                 <div id="optionError"></div>
                                 <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
-                                    <option value="">Selecione um navegador</option>
+                                    <option value=""></option>
                                     <option value="Chromium">Google Chrome</option>
                                     <option value="Gecko">Mozilla Firefox</option>
                                     <option value="EdgeHTML">Microsoft Edge</option>
@@ -200,9 +236,6 @@
                     </div>
                 </div>
             </div>
-            <label style="margin-left: 2%;">Instituição: CESUPA Argo;</label><br>
-            <label style="margin-left: 2%;">Orientador: Marcos Paulo;</label><br>
-            <label style="margin-left: 2%;">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
             <iframe style="display: none;" name="iframe"></iframe>
         </footer>
         <script src="../../dependencies/jquery-3.0.0.min.js"></script>

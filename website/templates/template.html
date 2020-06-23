@@ -5,6 +5,8 @@
         <meta name="author" content="Mateus Alberio, Nícolas Rocha, Paula Martins">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-signin-client_id" content="248164948234-ufloc99802k8ehkmmek9g6cb5acmrsji.apps.googleusercontent.com">
+        <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../dependencies/bootstrap.min.css">
         <title>Nosso Pará</title>
@@ -22,14 +24,17 @@
                             <a class="nav-link" href="../home.html">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./about.html">Sobre</a>
+                            <a class="nav-link active" href="./about.html">Sobre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./places.html">Locais</a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <button type="button" class="btn btn-danger btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">Fazer Login</button>
+                        <button type="button" class="btn btn-danger btn-sm nav-link" id="account_btn" data-toggle="modal" data-target="#account_modal">
+                            <span id="account_placeholder">Fazer Login</span>
+                            <div id="account_display"></div>
+                        </button>
                         <span style="visibility: hidden;">...</span>
                         <div class="input-group">
                             <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -52,11 +57,16 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <br><br><br><br><br>
-                            <p style="text-align: center;">[Account_Placeholder]</p>
-                            <br><br><br><br><br>
+                            <div id="signin_box">
+                                <h5>Faça login com sua conta do Google</h5>
+                                <br><br><br><br>
+                                <div id="google_btn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                                <br><br><br><br>
+                            </div>
+                            <div id="account_box"></div>
                         </div>
                         <div class="modal-footer bg-danger text-light">
+                            <span id="signout_btn"></span>
                             <button type="button" class="btn btn-primary">Login</button>
                         </div>
                     </div>
@@ -64,27 +74,61 @@
             </div>
         </header>
         <main style="margin-top: 50px;">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br>
+            <section class="ads_h">
+                <a href="#ads">
+                    <div class="card mb-3 shadow">
+                        <img src="../img/ads/placeholder.gif" class="card-img-top" alt="ads">
+                    </div>
+                </a>
+            </section>
+            <br><br>
         </main>
         <footer class="bg-danger text-light">
             <h5 style="margin-left: 1%">
-                <strong>Sobre esse site:</strong>
+                <strong>Nosso Pará</strong>
             </h5>
-            <button type="submit" class="btn btn-primary" id="feedback_btn" data-toggle="modal" data-target="#feedback_modal">
-                <img src="../img/icons/feedback_icon.png">
-            </button>
-            <div class="modal fade feedback" id="feedback_modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered text-light" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-danger">
-                            <h5 class="modal-title">Feedback</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitFeedback()">
+            <label id="footer_text">Veja informações sobre vários pontos turísticos e estabelecimentos do Pará no nosso site.</label>
+            <p id="links">
+                <a class="btn btn-sm btn-primary" role="button" href="../home.html">Início</a>
+                <button type="button" id="feedback_btn" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#feedback_box">Feedback</button>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#credits_box">Créditos</button>
+            </p>
+            <div class="modal fade" id="credits_box" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" id="credit_content">
+                        <div class="modal-header bg-danger text-light">
+                            <h5 class="modal-title">Créditos</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body text-dark">
-                            <form action="./actions/feedback.php" name="feedback" id="feedback_box" method="get" target="iframe" onsubmit="return validateFeedback()" required>
+                            <h5>Sobre o site:</h5><br>
+                            <label style="margin-left: 2%;"><strong>Instituição: </strong>Cesupa ARGO;</label><br>
+                            <label style="margin-left: 2%;"><strong>Orientador: </strong>Marcos Paulo;</label><br>
+                            <label style="margin-left: 2%;"><strong>Equipe: </strong>Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
+                            <br><br><br>
+                        </div>
+                        <div class="modal-footer bg-danger">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade feedback" id="feedback_box" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered text-light" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-light">
+                            <h5 class="modal-title">Feedback</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="exitModal()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            <form action="../actions/feedback.php" name="feedback" id="feedback_form" method="get" target="iframe" onsubmit="return validateFeedback()" required>
                                 <h5>Deixe seu feedback aqui:</h5>
+                                <h6>Marque a classificação do seu feedback:</h6>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="sugestion">
                                     <label class="custom-control-label" for="customRadio1">Sugestão</label>
@@ -100,7 +144,7 @@
                                 <h6>Selecione qual navegador está sendo utilizado:</h6>
                                 <div id="optionError"></div>
                                 <select class="custom-select my-1 mr-sm-2 border-primary" id="inlineFormCustomSelectPref" name="option">
-                                    <option value="">Selecione um navegador</option>
+                                    <option value=""></option>
                                     <option value="Chromium">Google Chrome</option>
                                     <option value="Gecko">Mozilla Firefox</option>
                                     <option value="EdgeHTML">Microsoft Edge</option>
@@ -119,13 +163,12 @@
                     </div>
                 </div>
             </div>
-            <label style="margin-left: 2%;">Instituição: CESUPA Argo;</label><br>
-            <label style="margin-left: 2%;">Orientador: Marcos Paulo;</label><br>
-            <label style="margin-left: 2%;">Equipe: Mateus Alberio, Nícolas Rocha, Paula Martins;</label>
             <iframe style="display: none;" name="iframe"></iframe>
         </footer>
         <script src="../dependencies/jquery-3.0.0.min.js"></script>
         <script src="../dependencies/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="../dependencies/google_auth.js"></script>
         <script src="../scripts/main.js"></script>
         <iframe style="display: none;" name="iframe"></iframe>
     </body>

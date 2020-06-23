@@ -14,6 +14,14 @@
     border-radius: 100%;
 }
 
+.fade {
+    backdrop-filter: blur(5px);
+}
+
+a {
+    text-decoration: wavy !important;
+}
+
 h1 { 
     font-size: 49px; 
     font-weight: 700; 
@@ -26,7 +34,7 @@ h1 {
     line-height: 20px;
 }
 
-.ads {
+.ads_h {
     width: 500px;
     position: relative;
     display: block;
@@ -34,21 +42,27 @@ h1 {
     margin-right: auto;
 }
 
-.ads2 {
-    width: 10%;
+.ads_v {
+    width: 18%;
     float: right;
     position: relative;
     display: block;
-    top: 40px;
-    margin-right: 6%;
+    top: 390px;
+    margin-right: 2%;
+    margin-left: 1%;
 }
 
 footer {
+    padding-top: 1%;
+    padding-bottom: 1px;
     bottom: 0;
-    padding-top: 5px;
 }
 
-#feedback_btn {
-    float: right;
-    margin-right: 2%;
+#footer_text {
+    margin-left: 2%;
+    font-size: 14px;
+}
+
+#links {
+    text-align: center !important;
 }
